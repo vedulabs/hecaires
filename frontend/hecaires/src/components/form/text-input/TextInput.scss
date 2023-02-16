@@ -1,0 +1,40 @@
+@import '../../../styling/default/common.scss';
+
+.input-container {
+  @include vertical-flex;
+  @include full-width;
+  padding-top: 1rem;
+  position: relative;
+
+  input {
+    outline: none;
+    display: inline-block;
+    @include full-width;
+    line-height: 1rem;
+    padding: 0.25rem;
+    padding-left: 0;
+    font-size: 0.85rem;
+    color: $font-color;
+    border: none;
+    border-bottom: solid 1px $dark-lighter-generic-color;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  label {
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    bottom: 0.25rem;
+    font-size: 0.9rem;
+    transition: all 0.25s;
+    opacity: 0.5;
+
+    &.filled {
+      transform: translateY(-1.25rem);
+      font-size: 0.75rem;
+      opacity: 0.85;
+    }
+  }
+}

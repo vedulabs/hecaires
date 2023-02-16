@@ -1,0 +1,55 @@
+@import '../../../styling/default/common.scss';
+
+a {
+  outline: none;
+  cursor: pointer;
+  @include horizontal-flex('center', 'center');
+  vertical-align: baseline;
+  text-align: center;
+  font-size: 1rem;
+
+  &.default {
+    min-width: 4rem;
+    padding: 0.5rem;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 2rem;
+    transition: all 0.2s;
+
+    &:hover {
+      @extend .selected;
+    }
+  }
+
+  &.primary {
+    min-width: 4rem;
+    padding: 0.5rem;
+    border-color: $primary-color;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 2rem;
+    transition: all 0.2s;
+
+    &:hover {
+      @extend .selected;
+    }
+  }
+
+  &.selected {
+    box-shadow: $box-light-shadow;
+    background-color: $primary-invert-color;
+    border: solid 1px $primary-semitransparent-color;
+  }
+
+  div {
+    @include horizontal-flex('center', 'center');
+
+    svg {
+      height: 1.5rem;
+      margin-right: 0.5rem;
+      path {
+        fill: $font-color;
+      }
+    }
+  }
+}

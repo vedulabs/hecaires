@@ -1,0 +1,62 @@
+@import './variables.scss';
+
+@mixin breakpoint($name) {
+  @if not map-has-key($breakpoints, $name) {
+    @warn "Warning: `#{$name}` is not a valid breakpoint name.";
+  } @else {
+    @media (max-width: map-get($breakpoints, $name)) {
+      @content;
+    }
+  }
+}
+
+@mixin full-width {
+  width: 100%;
+}
+
+@mixin vertical-flex($align-items: 'normal', $justify-content: 'flex-start') {
+  $align-items: unquote($align-items);
+  $justify-content: unquote($justify-content);
+
+  display: flex;
+  flex-direction: column;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin horizontal-flex($align-items: 'center', $justify-content: 'flex-start') {
+  $align-items: unquote($align-items);
+  $justify-content: unquote($justify-content);
+
+  display: flex;
+  flex-direction: row;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+.flex-expander {
+  flex-grow: 1;
+}
+
+.full-width {
+  @include full-width;
+}
+
+.all-transitions-hals-sec {
+  transition: all 0.5s;
+}
+
+.hidden-with-opacity {
+  opacity: 0;
+}
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+span.error {
+  color: red;
+  font-size: 0.75rem;
+}

@@ -1,0 +1,31 @@
+@import '../../../../styling/default/common.scss';
+
+nav {
+  @include horizontal-flex('center', 'space-around');
+  @include full-width;
+  height: 2.5rem;
+  padding-left: 5%;
+  padding-right: 5%;
+
+  @include breakpoint('medium') {
+    display: none;
+  }
+
+  &.mobile {
+    @include vertical-flex;
+    justify-content: flex-start;
+    width: auto;
+    height: 95%;
+    padding: 5%;
+    padding-top: 20%;
+
+    a {
+      margin-top: 10%;
+    }
+  }
+
+  .link-button {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}

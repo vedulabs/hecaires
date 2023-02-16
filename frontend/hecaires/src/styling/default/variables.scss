@@ -1,0 +1,28 @@
+$font-family: Arial, sans-serif;
+$font-size: 14px;
+$font-color: #404040;
+$font-light-color: #cecece;
+$font-primary-invert-color: #ffffff;
+
+$background-color: #fefefe;
+
+$dark-generic-color: #3a3a3a;
+$dark-lighter-generic-color: #9d9d9d;
+
+$primary-color: #2985ff;
+$primary-light-color: #7db5ff;
+$primary-invert-color: #ffffff;
+$primary-semitransparent-color: #2985ff80;
+$primary-semitransparent-darken-color: #143e75c4;
+
+$box-widget-shadow: 1px 1px 2px 1px #c5c5c5;
+$box-light-shadow: 2px 2px 8px 1px #d4d4d4;
+
+$breakpoints: (
+  small: 600px,
+  medium: 720px,
+  large: 960px,
+  wide: 1200px
+);
+
+$overlay-z-index: 1000000;

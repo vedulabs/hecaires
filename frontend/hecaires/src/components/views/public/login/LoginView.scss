@@ -1,0 +1,40 @@
+@import '../../../../styling/default/common.scss';
+
+.login-container {
+  @include vertical-flex('center');
+  margin-top: 10%;
+
+  h1 {
+    @include full-width;
+    color: $primary-color;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    cursor: default;
+  }
+
+  .footer {
+    padding-top: 5%;
+    color: $font-light-color;
+    @include horizontal-flex('center', 'center');
+    svg {
+      height: 0.5rem;
+      padding-bottom: 0.2rem;
+    }
+    path {
+      fill: $font-light-color;
+    }
+    span {
+      padding-left: 0.2rem;
+      font-size: 0.5rem;
+      cursor: default;
+    }
+  }
+
+  .login-form {
+    @include vertical-flex;
+    align-self: center;
+    max-width: 300px;
+    margin-top: 2rem;
+  }
+}

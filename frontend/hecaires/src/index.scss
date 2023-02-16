@@ -1,0 +1,32 @@
+@import './styling/default/common.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: $font-family;
+  color: $font-color;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+#root {
+  @include vertical-flex;
+  height: 100%;
+  font-size: $font-size;
+  background-color: $background-color;
+}

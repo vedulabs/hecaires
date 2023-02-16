@@ -1,0 +1,44 @@
+@import '../../../styling/default/common.scss';
+
+header {
+  @include horizontal-flex('flex-end');
+  @extend .prevent-select;
+
+  .login-btn {
+    align-self: flex-start;
+    @include breakpoint('medium') {
+      align-self: center;
+    }
+  }
+
+  .logout-button {
+    padding: 0;
+    min-width: unset;
+    position: absolute;
+    right: 0.25rem;
+    top: 0.25rem;
+  }
+}
+
+#home-anchor {
+  cursor: pointer;
+  @include horizontal-flex;
+  h1 {
+    margin: 0;
+    margin-left: -0.5rem;
+    margin-bottom: -1rem;
+    font-size: 3rem;
+    color: $font-light-color;
+    text-shadow: -1px -1px 0px $primary-color;
+    @include breakpoint('medium') {
+      display: none;
+    }
+  }
+}
+
+#header-logo {
+  img {
+    width: 4rem;
+    height: 4rem;
+  }
+}

@@ -1,0 +1,7 @@
+@import '../../../styling/default/common.scss';
+
+footer {
+  @include full-width;
+  @include horizontal-flex('', 'center');
+  color: $font-light-color;
+}

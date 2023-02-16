@@ -1,0 +1,7 @@
+@import '../../styling/default/common.scss';
+
+#layout {
+  height: 100%;
+  padding: min(10px, 2%);
+  @include vertical-flex;
+}

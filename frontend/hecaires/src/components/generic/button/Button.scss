@@ -1,0 +1,82 @@
+@import '../../../styling/default/common.scss';
+
+button {
+  outline: none;
+  cursor: pointer;
+  background: none repeat scroll 0 0 transparent;
+  border: medium none;
+
+  &.disabled {
+    filter: grayscale(0.5);
+    pointer-events: none;
+  }
+
+  &.default {
+    line-height: 1rem;
+    min-width: 4rem;
+    padding: 0.5rem;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 2rem;
+    border-color: $font-light-color;
+    transition: all 0.2s;
+
+    &:hover {
+      border-color: transparent;
+      box-shadow: 1px 1px 1px 1px $primary-color;
+    }
+  }
+
+  &.primary {
+    line-height: 1rem;
+    min-width: 4rem;
+    padding: 0.5rem;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 2rem;
+    border-color: $primary-color;
+    transition: all 0.2s;
+
+    &.accented {
+      background-color: $primary-color;
+      color: $font-primary-invert-color;
+
+      &:hover {
+        font-weight: 700;
+      }
+    }
+
+    &:hover {
+      background-color: $primary-color;
+      color: $font-primary-invert-color;
+    }
+  }
+
+  &.secondary {
+    line-height: 1rem;
+    min-width: 4rem;
+    padding: 0.5rem;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 2rem;
+    border-color: $primary-color;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $font-primary-invert-color;
+    }
+  }
+
+  &.container {
+    line-height: 1rem;
+    min-width: 4rem;
+    padding: 0.5rem;
+    border: none;
+    padding: 0.5rem;
+
+    svg {
+      height: 2rem;
+    }
+  }
+}

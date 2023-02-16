@@ -1,0 +1,52 @@
+@import '../../../../styling/default/common.scss';
+
+.mobile-menu-btn {
+  width: 2rem;
+  height: 2rem;
+  align-self: center;
+  display: none;
+
+  path {
+    fill: $font-color;
+  }
+
+  @include breakpoint('medium') {
+    display: inherit;
+  }
+}
+
+.mobile-menu-container {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  bottom: 5%;
+  right: 5%;
+  background-color: #fafafa;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 16px 2px #969696;
+  visibility: hidden;
+
+  &.visible {
+    visibility: visible;
+  }
+
+  .close-menu-btn {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+
+    path {
+      fill: $font-color;
+    }
+  }
+
+  #header-logo {
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    img {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}

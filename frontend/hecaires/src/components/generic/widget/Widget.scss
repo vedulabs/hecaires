@@ -1,0 +1,8 @@
+@import '../../../styling/default/common.scss';
+
+.widget {
+  @include vertical-flex;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  box-shadow: $box-widget-shadow;
+}
